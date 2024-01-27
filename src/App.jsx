@@ -7,10 +7,12 @@ import NavBar from './components/NavBar'
 // Styles
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
+// Global State
+import PokemonProvider from './Context/PokemonProvider';
 
 function App() {
   return (
-    <>
+    <PokemonProvider>
       <CssBaseline />
       <NavBar />
       <div style={{marginTop: '30px'}}>
@@ -19,7 +21,7 @@ function App() {
           <Pokemon />
         </Container>
       </div>
-    </>
+    </PokemonProvider>
   )
 }
 
