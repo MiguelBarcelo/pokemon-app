@@ -1,19 +1,19 @@
-import { API, handleApiError } from './utils';
+import { API, handleApiError, axiosInstance } from './utils';
 
 export const getPokemon = async (search) => {
   try {
-    const { data } = await API.get(`/pokemon/${search}/`);
+    const { data } = await API.get(`/pokemon/${search.toLowerCase()}/`);
     return { error: null, data };
   } catch (err) {
     return handleApiError(err);
   }
 };
 
-export const getColor = async (search) => {
+export const getColor = async (specieUrl) => {
   try {
-    const { data } = await API.get(`/pokemon-color/${search}/`);
+    const { data } = await axiosInstance.get(specieUrl);
     return { error: null, data };
   } catch (err) {
-    handleApiError(err);
+    return handleApiError(err);
   }
-}
+};
