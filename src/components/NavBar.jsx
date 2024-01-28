@@ -9,7 +9,7 @@ export default function NavBar() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Pokemon App
+            Pokemon Card App
           </Typography>
         </Toolbar>
       </AppBar>
