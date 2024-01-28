@@ -1,3 +1,5 @@
 import { createContext } from "react";
 
-export const PokemonContext = createContext(null);
+const PokemonContext = createContext(null);
+
+export default PokemonContext;

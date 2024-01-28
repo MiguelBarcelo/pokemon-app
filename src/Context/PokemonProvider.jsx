@@ -2,7 +2,7 @@ import { useReducer } from 'react';
 import initialState from './initialState';
 import reducer from './reducer';
 // Context
-import { PokemonContext } from "./PokemonContext";
+import PokemonContext from "./PokemonContext";
 
 export default function PokemonProvider({ children }) {
   const [ state, dispatch ] = useReducer(reducer, initialState);

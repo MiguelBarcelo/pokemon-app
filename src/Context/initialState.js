@@ -1,5 +1,7 @@
 const initialState = {
-  pokemon: {}
+  pokemon: null,
+  loading: null,
+  error: null
 };
 
 export default initialState;
